@@ -1,0 +1,128 @@
+Columns and their data types:
+- Name: int64
+- Epoch Date Close Approach: float64
+- Relative Velocity km per sec: object
+- Relative Velocity km per hr: float64
+- Miles per hour: float64
+- Miss Dist.(Astronomical): float64
+- Miss Dist.(lunar): float64
+- Miss Dist.(kilometers): float64
+- Miss Dist.(miles): float64
+- Jupiter Tisserand Invariant: float64
+- Epoch Osculation: float64
+- Semi Major Axis: float64
+- Asc Node Longitude: float64
+- Perihelion Arg: float64
+- Aphelion Dist: float64
+- Perihelion Time: float64
+- Mean Anomaly: float64
+- Mean Motion: float64
+- approach_year: float64
+- approach_month: float64
+- approach_day: float64
+- Orbital Period: object
+- Orbit Uncertainity: object
+- Hazardous: bool
+
+Numerical columns: ['Name', 'Epoch Date Close Approach', 'Relative Velocity km per hr', 'Miles per hour', 'Miss Dist.(Astronomical)', 'Miss Dist.(lunar)', 'Miss Dist.(kilometers)', 'Miss Dist.(miles)', 'Jupiter Tisserand Invariant', 'Epoch Osculation', 'Semi Major Axis', 'Asc Node Longitude', 'Perihelion Arg', 'Aphelion Dist', 'Perihelion Time', 'Mean Anomaly', 'Mean Motion', 'approach_year', 'approach_month', 'approach_day']
+Categorical columns: ['Relative Velocity km per sec', 'Orbital Period', 'Orbit Uncertainity']
+
+Total number of columns: 24
+Total number of rows: 4534
+
+Missing values per column:
+Name                               0
+Epoch Date Close Approach       1254
+Relative Velocity km per sec    1350
+Relative Velocity km per hr     1501
+Miles per hour                   866
+Miss Dist.(Astronomical)         601
+Miss Dist.(lunar)               1117
+Miss Dist.(kilometers)          1368
+Miss Dist.(miles)                652
+Jupiter Tisserand Invariant     1732
+Epoch Osculation                1527
+Semi Major Axis                 1188
+Asc Node Longitude              1096
+Perihelion Arg                  1134
+Aphelion Dist                    815
+Perihelion Time                 1564
+Mean Anomaly                     918
+Mean Motion                     1508
+approach_year                    819
+approach_month                  1528
+approach_day                     543
+Orbital Period                   530
+Orbit Uncertainity              1767
+Hazardous                          0
+dtype: int64
+
+Descriptive statistics for numerical columns:
+               Name  Epoch Date Close Approach  ...  approach_month  approach_day
+count  4.534000e+03               3.280000e+03  ...     3006.000000   3991.000000
+mean   3.268624e+06               1.178921e+12  ...        6.474385     14.896517
+std    5.517954e+05               1.986535e+11  ...        3.462926      5.717762
+min    2.000433e+06               7.889472e+11  ...        1.000000      1.000000
+25%    3.092344e+06               1.014365e+12  ...        3.000000      8.000000
+50%    3.513224e+06               1.202458e+12  ...        7.000000     15.000000
+75%    3.691155e+06               1.354954e+12  ...       10.000000     22.000000
+max    3.781897e+06               1.473318e+12  ...       12.000000     22.000000
+
+[8 rows x 20 columns]
+
+Unique values in 'Relative Velocity km per sec': ['Very Slow' 'Slow' nan 'Fast' 'Very Fast']
+
+Unique values in 'Orbital Period': ['Low' 'Medium' nan 'High']
+
+Unique values in 'Orbit Uncertainity': ['Medium' nan 'Low' 'High']
+
+Correlation matrix for numerical columns:
+                                 Name  ...  approach_day
+Name                         1.000000  ...     -0.017190
+Epoch Date Close Approach    0.188469  ...      0.012424
+Relative Velocity km per hr -0.173408  ...      0.002289
+Miles per hour              -0.172888  ...      0.016869
+Miss Dist.(Astronomical)    -0.155269  ...      0.001533
+Miss Dist.(lunar)           -0.140484  ...     -0.022491
+Miss Dist.(kilometers)      -0.142508  ...      0.007094
+Miss Dist.(miles)           -0.153537  ...     -0.005422
+Jupiter Tisserand Invariant  0.005657  ...     -0.016380
+Epoch Osculation             0.001506  ...      0.004970
+Semi Major Axis              0.022772  ...      0.005531
+Asc Node Longitude          -0.007010  ...     -0.010541
+Perihelion Arg              -0.004971  ...      0.006453
+Aphelion Dist               -0.009250  ...      0.013074
+Perihelion Time              0.008676  ...     -0.024550
+Mean Anomaly                -0.057653  ...     -0.009615
+Mean Motion                  0.005964  ...      0.003557
+approach_year                0.184899  ...     -0.010320
+approach_month               0.002881  ...     -0.027888
+approach_day                -0.017190  ...      1.000000
+
+[20 rows x 20 columns]
+
+Imputation completed. Imputed dataset saved as 'imputed_dataset.csv'.
+Bins for 'Relative Velocity km per hr':
+- Very Slow: [1207.81, 26064.64)
+- Slow: [26064.64, 49649.14)
+- Medium: [49649.14, 73233.64)
+- Fast: [73233.64, 160681.49)
+
+'Relative Velocity km per sec' column after imputation:
+0       Very Slow
+1            Slow
+2            Slow
+3       Very Slow
+4       Very Slow
+          ...    
+4529         Slow
+4530    Very Slow
+4531    Very Slow
+4532         Slow
+4533    Very Fast
+Name: Relative Velocity km per sec, Length: 4534, dtype: object
+
+Final imputed dataset saved as 'final_imputed_dataset.csv'.
+
+Preprocessed dataset saved as 'Preprocessed_dataset.csv'.
+Accuracy of the ensemble model: 0.86
