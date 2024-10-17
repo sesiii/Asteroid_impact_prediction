@@ -32,7 +32,7 @@ After data preprocessing, several models were trained on the dataset to predict 
 ## Key Files
 - `final_imputed_dataset.csv`: The dataset after KNN imputation.
 - `Preprocessed_dataset.csv`: The preprocessed dataset, ready for model training.
-- `model.ipynb`: Jupyter notebook containing the entire workflow, including data cleaning, imputation, feature engineering, and model training.
+- `Astronomy.ipynb`: Jupyter notebook containing the entire workflow, including data cleaning, imputation, feature engineering, and model training.
 - `report.pdf`: A detailed report summarizing the project methodology, results, and conclusions.
 
 ## Results
